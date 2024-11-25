@@ -24,13 +24,15 @@ export default function Timer()
         shadowColor: '#00d0ff',
         shadowOffset: { width: 0, height: 0 },
         shadowOpacity: 1,
-        shadowRadius: 50
+        shadowRadius: 30,
+        justifyContent: 'center',
+        alignItems: 'center'
         
     }
     
     const textStyle = {
         fontSize: 150,
-        color: '#00d0ff',
+        color: '#fff',
         // textShadowColor: '#00d0ffff',
         // textShadowOffset: {width: 0, height: 0},
         // textShadowRadius: 100
@@ -40,7 +42,9 @@ export default function Timer()
     
     return (
         <View style={divStyle}>
-            <Text style={textStyle}>{time}</Text>
+            <View style={divStyle}>
+                <Text style={textStyle}>{time}</Text>
+            </View>
         </View>
     )
 }

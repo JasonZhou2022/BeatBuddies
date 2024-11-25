@@ -6,15 +6,17 @@ export default function PlayButton()
     const [numClicks, setClicks] = useState(0);
 
     const viewStyle = {
-        borderWidth: 2,
-        borderColor: '#00d0ff',
-        borderRadius: 5,
-        padding: 10
+        //borderWidth: 2,
+        //borderColor: '#00d0ff',
+        //borderRadius: 5,
+        padding: 10,
+        alignItems: 'center'
     }
 
     const textStyle = {
         color: '#00d0ff',
         fontSize: 50,
+        
         
     }
 

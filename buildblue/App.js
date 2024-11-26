@@ -2,6 +2,9 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import PickSongPage from './Pages/PickSongPage'
 import FeedPage from './Pages/FeedPage'
+import LoginPage from './Pages/LoginPage'
+import ProfilePage from './Pages/ProfilePage'
+import HomePage from './Pages/HomePage'
 
 export default function App() {
   return (

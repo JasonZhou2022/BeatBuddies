@@ -6,7 +6,19 @@ import Post from '../Components/Post'
 export default function FeedPage() {
     const { width, height } = Dimensions.get('window');
     return (
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
+        <ScrollView style={styles.container}>
+          <Post userLeft={"Jason"} userRight={"Amy"}/>
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+          <Post />
+        </ScrollView>
+    )
+}
+
+{/* <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={[styles.view, { height: height * 0.5 }]}>
         <Text style={styles.text}>View 1</Text>
       </View>
@@ -22,15 +34,16 @@ export default function FeedPage() {
       <View style={[styles.view, { height: height * 0.5 }]}>
         <Text>View 5</Text>
       </View>
-    </ScrollView>
-    )
-}
+    </ScrollView> */}
+
 
 const styles = StyleSheet.create({
     container: {
+        backgroundColor: "black",
         width: "100%"
     },
     text: {
-        color: 'white'
+        color: 'white',
+        fontSize: 100
     }
 })

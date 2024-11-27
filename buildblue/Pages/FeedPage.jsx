@@ -9,19 +9,19 @@ export default function FeedPage() {
     const { width, height } = Dimensions.get('window');
     return (
       <ScrollView style={[styles.container, styles.debug]} contentContainerStyle={{alignItems: 'center'}}>
-        <Box style={styles.margin10}></Box>
-        <Post userLeft={"Jason"} userRight={"Amy"}/>
-        <Post userLeft={"Bob"} userRight={"Marley"}/>
-        <Post userLeft={"Trump"} userRight={"Biden"}/>
-        <Post userLeft={"Chad"} userRight={"Kyle"}/>
-        <Post userLeft={"Jenny Z"} userRight={"Jenny K"}/>
-        <Post userLeft={"Matthew"} userRight={"Erich"}/>
-        <Post userLeft={"Lina"} userRight={"Wayne"}/>
-        <Post userLeft={"Josh"} userRight={"Darian"}/>
-        <Post userLeft={"Isabella"} userRight={"Youna"}/>
-        <Post userLeft={"Elle"} userRight={"Fay"}/>
-        <Post userLeft={"Michael"} userRight={"Barry"}/>
-    </ScrollView>
+            <Box style={styles.margin10}></Box>
+            <Post userLeft={"Jason"} userRight={"Amy"}/>
+            {/* <Post userLeft={"Bob"} userRight={"Marley"}/>
+            <Post userLeft={"Trump"} userRight={"Biden"}/>
+            <Post userLeft={"Chad"} userRight={"Kyle"}/>
+            <Post userLeft={"Jenny Z"} userRight={"Jenny K"}/>
+            <Post userLeft={"Matthew"} userRight={"Erich"}/>
+            <Post userLeft={"Lina"} userRight={"Wayne"}/>
+            <Post userLeft={"Josh"} userRight={"Darian"}/>
+            <Post userLeft={"Isabella"} userRight={"Youna"}/>
+            <Post userLeft={"Elle"} userRight={"Fay"}/>
+            <Post userLeft={"Michael"} userRight={"Barry"}/> */}
+        </ScrollView>
     )
 
     

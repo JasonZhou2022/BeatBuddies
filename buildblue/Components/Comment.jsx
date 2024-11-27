@@ -9,10 +9,16 @@ export default function Comment({handle, comment}) {
     const { width, height } = Dimensions.get('window');
 
     return (
-        <HStack style={{alignItems:'center', paddingBottom: height * 0.005}}>
-            <AvatarBubble className="AvatarPicture" size='xs' name={'Test'} style={{marginRight: width * 0.02}}/>
-            <Text className="commentHandle" style={[GlobalStyles.white, GlobalStyles.bold]}>Test</Text>
-            <Text className="comment" style={[GlobalStyles.white, {paddingLeft: width * 0.02}]}>Generic Comment Goes Here</Text>
+        <HStack style={[styles.stack, {alignItems:'center', paddingBottom: height * 0.01}]}>
+            <AvatarBubble className="AvatarPicture" size='xs' name={{handle}} style={{marginRight: width * 0.02}}/>
+            <Text className="commentHandle" style={[GlobalStyles.white, GlobalStyles.bold]}>{handle}</Text>
+            <Text className="comment" style={[GlobalStyles.white, {paddingLeft: width * 0.02}]}>{comment}</Text>
         </HStack>
     )
 }
+
+const styles = StyleSheet.create({
+    stack: {
+        flexDirection: 'row',
+    }
+})

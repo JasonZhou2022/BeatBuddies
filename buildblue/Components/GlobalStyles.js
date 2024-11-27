@@ -9,10 +9,10 @@ const globalStyles = StyleSheet.create({
   },
   border: {
     borderWidth: 2,
-    borderColor: 'red'
+    borderColor: 'green'
   },
   debug: {
-    borderColor: 'red',
+    borderColor: 'yellow',
     borderWidth: 5
   }
 });

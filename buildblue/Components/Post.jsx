@@ -1,21 +1,23 @@
-import { useEffect, useState, useRef } from 'react';
-import { View, Text, StyleSheet, Dimensions, Pressable, Animated, useAnimatedValue } from 'react-native';
+import { useState, useRef } from 'react';
+import { Text, StyleSheet, Dimensions, Pressable } from 'react-native';
 import AvatarBubble from './AvatarBubble';
 import CommentSection from './CommentSection';
+import Comment from './Comment';
 import { Avatar } from './ui/avatar';
 import { VStack } from "@/Components/ui/vstack";
 import { HStack } from "@/Components/ui/hstack";
-import { Box } from "@/Components/ui/box";
-import { Motion } from "@legendapp/motion";
-import { MotionLinearGradient } from '@legendapp/motion/linear-gradient-expo';
+// import { Box } from "@/Components/ui/box";
+//import { Motion } from "@legendapp/motion";
+//import { MotionLinearGradient } from '@legendapp/motion/linear-gradient-expo';
 import GlobalStyles from '../Components/GlobalStyles';
 import { LinearGradient } from 'expo-linear-gradient';
+import Animated, {useAnimatedStyle, withTiming} from 'react-native-reanimated';
 
 export default function Post({userLeft = "Jason", userRight = "Amy", nameLeft = userLeft, nameRight = userRight}) {
 
     const { width, height } = Dimensions.get('window');
     const [expanded, setExpanded] = useState(false);
-    const scale = useRef(new Animated.Value(1)).current;
+    //const scale = useRef(new Animated.Value(1)).current;
     
     const startSpring = () => {
         Animated.spring(scale, {
@@ -39,6 +41,22 @@ export default function Post({userLeft = "Jason", userRight = "Amy", nameLeft = 
         //startSpring();
         console.log("PRESSED");
     }
+
+    const animatedStyle = useAnimatedStyle(() => {
+        const animatedHeight = expanded ? withTiming(100) : withTiming(0);
+        return {
+            height: animatedHeight,
+        }
+    })
+
+    const exampleCommenters = ['Jason', 'Amy', 'Michael', 'Jenny Z', 'Barry', 'Matthew', 'Erich', 'Jenny K', 'Isabella', 'Elle', 'Fay']
+    const examplesToDisplay = exampleCommenters.slice(0, 4);
+    const example = 'Generic Comment Goes Here!'
+    const exampleComments = examplesToDisplay.map((handle, index) => (
+        <Comment key={index} handle={handle} comment={example} />
+        
+      ));
+
     //{ flex: 1, justifyContent: 'center', alignItems: 'center' }
     return (
         <Pressable style={[styles.pressable, styles.debug]} onPress={onPress}>
@@ -58,24 +76,31 @@ export default function Post({userLeft = "Jason", userRight = "Amy", nameLeft = 
                     <Text style={[GlobalStyles.white, styles.name]}>{userRight}</Text>
                     <AvatarBubble size="lg" name={nameRight} style={[styles.avatarRight, styles.debug]}/>
                 </HStack>
-
-                    
-
-                    {/* <Pressable 
-                        style={[styles.pressable, styles.debug, {borderColor: 'green'}]}
-                        onPress={onPress}
-                    >
-                </Pressable> */}
             </LinearGradient>
-            <Motion.View
-                initial={{ height: 0 }}
-                animate={{ height: expanded ? height * 0.2 : 0 }}
-                transition={{ duration: 150 }}
-                style={[GlobalStyles.border, styles.commentSection]}
+            {/* <Motion.View
+                style={[{
+                    maxHeight: expanded ? height * 0.2 : 0, // Expand to 300px or collapse to 0px
+                    overflow: 'hidden', // Hide overflow content when collapsed
+                  },
+                  GlobalStyles.border, {backgroundColor: "#28282B"}
+                ]}
+                  initial={{ maxHeight: 0 }}
+                  animate={{ maxHeight: expanded ? 300 : 0 }} // Animate between 0 and 300
+                  transition={{
+                    type: 'timing', // Use a timing transition for a smooth collapse/expand
+                    duration: 1000, // Duration of the animation
+                    useNativeDriver: true, // Use native driver for smooth performance
+                  }}
             >
-                {expanded ? <CommentSection /> : null}
-                
-            </Motion.View>
+                {/* {expanded ? <CommentSection style={styles.commentSection}/> : null} */}
+                {/* <Text style={[GlobalStyles.white, GlobalStyles.border]}>asdasd</Text> */}
+            {/* </Motion.View> */}
+
+            <Animated.View style={[animatedStyle]}>
+                {/* <Text style={[GlobalStyles.white, GlobalStyles.border]}>Test DropDown</Text> */}
+                {expanded ? <CommentSection style={styles.commentSection} comments={exampleComments}/> : null}
+            </Animated.View>
+
         </Pressable>
     )
 }
@@ -93,7 +118,10 @@ const styles = StyleSheet.create({
         paddingTop: height * 0.1,
     },
     commentSection: {
-        borderRaidus: 20,
+        //borderColor: 'green',
+        //borderWidth: 2,
+        borderRadius: 20,
+        backgroundColor: "#28282B",
     },
     pressable: {
         flex: 1,

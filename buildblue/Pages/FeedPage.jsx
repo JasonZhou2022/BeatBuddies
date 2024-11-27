@@ -8,7 +8,7 @@ import { Box } from "@/Components/ui/box";
 export default function FeedPage() {
     const { width, height } = Dimensions.get('window');
     return (
-      <ScrollView style={styles.container} contentContainerStyle={{alignItems: 'center'}}>
+      <ScrollView style={[styles.container, styles.debug]} contentContainerStyle={{alignItems: 'center'}}>
         <Box style={styles.margin10}></Box>
         <Post userLeft={"Jason"} userRight={"Amy"}/>
         <Post userLeft={"Bob"} userRight={"Marley"}/>
@@ -28,13 +28,20 @@ export default function FeedPage() {
 }
 
 const { width, height } = Dimensions.get('window');
+const debug = false;
+
 const styles = StyleSheet.create({
     container: {
         backgroundColor: "black",
-        width: "100%",
+        alignSelf: 'stretch',
+        //width: "100%",
         //justifyContent: 'center'
     },
     margin10: {
         marginTop: height * 0.1
+    },
+    debug: {
+        borderWidth: debug ? 5 : 0,
+        borderColor: debug ? 'green' : 0,
     }
 })

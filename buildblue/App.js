@@ -10,7 +10,7 @@ import HomePage from './Pages/HomePage'
 
 export default function App() {
   return (
-    <GluestackUIProvider mode="light"><View style={styles.container}>
+    <GluestackUIProvider mode="light"><View style={[styles.container, styles.debug]}>
         {/* <ProfilePage name="Jason Zhou" handle="@jxzhou" blurb="When Life Gives You Lemons..." /> */}
         <FeedPage />
         {/* <PickSongPage /> */}
@@ -20,12 +20,19 @@ export default function App() {
   );
 }
 
+const debug = false;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
+    alignSelf: 'stretch'
     //overflow: 'visible'
   },
+  debug: {
+    borderWidth: debug ? 5 : 0,
+    borderColor: debug ? 'white' : 0,
+  }
 });

@@ -1,20 +1,16 @@
 import { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import AvatarBubble from '../Components/AvatarBubble'
 
 export default function ProfilePage(){
     
+    const defaultLink = "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80";
     const size = 150;
 
     return (
-        <View style={styles.container}>
-            <View style={styles.center}>
-                <Icon name="user" size={size} color="#00d0ff"/>
-            </View>
-            <View style={styles.left}>
-                <Text style={styles.head}>Username:</Text>
-                {/* <Text style={styles.head}>Password:</Text> */}
-            </View>
+        <View>
+            <AvatarBubble uri = {defaultLink}/>
         </View>
     )
 }

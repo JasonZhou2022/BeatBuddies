@@ -1,4 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
+import "@/global.css";
+import { GluestackUIProvider } from "@/Components/ui/gluestack-ui-provider";
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import PickSongPage from './Pages/PickSongPage'
 import FeedPage from './Pages/FeedPage'
@@ -8,15 +10,13 @@ import HomePage from './Pages/HomePage'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <ProfilePage />
-      {/* <FeedPage /> */}
-      {/* <PickSongPage /> */}
-      {/* <Text>Finally got it working lets gooooo</Text> */}
-      {/* <StatusBar style="auto" /> */}
-      
-    </View>
-    
+    <GluestackUIProvider mode="light"><View style={styles.container}>
+        <ProfilePage />
+        {/* <FeedPage /> */}
+        {/* <PickSongPage /> */}
+        {/* <Text>Finally got it working lets gooooo</Text> */}
+        {/* <StatusBar style="auto" /> */}
+      </View></GluestackUIProvider>
   );
 }
 

@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "@gluestack-ui/button": "^1.0.8"
+    "@gluestack-ui/button": "^1.0.8",
+    "expo-linear-gradient": "^14.0.1",
+    "react-native-linear-gradient": "^2.8.3"
   }
 }

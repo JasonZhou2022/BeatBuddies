@@ -11,8 +11,8 @@ import HomePage from './Pages/HomePage'
 export default function App() {
   return (
     <GluestackUIProvider mode="light"><View style={styles.container}>
-        <ProfilePage name="Jason Zhou" handle="@jxzhou" blurb="When Life Gives You Lemons..." />
-        {/* <FeedPage /> */}
+        {/* <ProfilePage name="Jason Zhou" handle="@jxzhou" blurb="When Life Gives You Lemons..." /> */}
+        <FeedPage />
         {/* <PickSongPage /> */}
         {/* <Text>Finally got it working lets gooooo</Text> */}
         {/* <StatusBar style="auto" /> */}

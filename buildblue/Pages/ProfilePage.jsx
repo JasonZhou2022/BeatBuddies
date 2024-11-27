@@ -32,7 +32,12 @@ export default function ProfilePage(props){
             {/* <VStack style={[styles.debug, styles.padding5]}>
                 <Text style={[styles.childDebug, styles.fontUI]}>Username:</Text>
             </VStack> */}
-            <Button>
+
+{/* style={({pressed}) => [
+            {
+              backgroundColor: pressed ? 'red' : 'white',
+            }]} */}
+            <Button size="lg" variant="solid" backgroundColor="white" style={[styles.childDebug, styles.editButton]}>
                 <ButtonText>Edit</ButtonText>
             </Button>
         </Box>
@@ -48,6 +53,11 @@ const fontSizeUI = 25;
 const styles = StyleSheet.create({
     all: {
         flex: 1
+    },
+    editButton: {
+        //width: '30%',
+        marginTop: height * 0.05,
+        alignSelf: 'center'
     },
     fontUI: {
         fontSize: fontSizeUI,

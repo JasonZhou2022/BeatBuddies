@@ -12,7 +12,7 @@ import {
     const uri = props.uri;
     return (
         <View>
-            <Avatar size="md" >
+            <Avatar size={props.size} >
                 <AvatarFallbackText>Jane Doe</AvatarFallbackText>
                     <AvatarImage
                         source={{                    

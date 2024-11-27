@@ -1,15 +1,19 @@
 import { useEffect, useState, useRef } from 'react';
 import { View, Text, StyleSheet, Dimensions, Pressable, Animated, useAnimatedValue } from 'react-native';
 import AvatarBubble from './AvatarBubble';
+import CommentSection from './CommentSection';
 import { Avatar } from './ui/avatar';
 import { VStack } from "@/Components/ui/vstack";
 import { HStack } from "@/Components/ui/hstack";
 import { Box } from "@/Components/ui/box";
+import { Motion } from "@legendapp/motion";
+import { MotionLinearGradient } from '@legendapp/motion/linear-gradient-expo';
 import GlobalStyles from '../Components/GlobalStyles';
 import { LinearGradient } from 'expo-linear-gradient';
 
 export default function Post({userLeft = "Jason", userRight = "Amy", nameLeft = userLeft, nameRight = userRight}) {
 
+    const { width, height } = Dimensions.get('window');
     const [expanded, setExpanded] = useState(false);
     const scale = useRef(new Animated.Value(1)).current;
     
@@ -31,18 +35,15 @@ export default function Post({userLeft = "Jason", userRight = "Amy", nameLeft = 
       };
 
     const onPress = () => {
-        //setExpanded((expanded) => !expanded);
+        setExpanded((expanded) => !expanded);
         //startSpring();
         console.log("PRESSED");
     }
     //{ flex: 1, justifyContent: 'center', alignItems: 'center' }
     return (
-        // <Box style={[styles.debug, styles.container]}>
-            
-        // </Box>
         <Pressable style={[styles.pressable, styles.debug]} onPress={onPress}>
             <LinearGradient
-                colors={['#40C9FF', '#E81CFF']}
+                    colors={['#40C9FF', '#E81CFF']}
                 style={[styles.debug, styles.container]}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 0.5, y: 1.5 }}
@@ -58,16 +59,24 @@ export default function Post({userLeft = "Jason", userRight = "Amy", nameLeft = 
                     <AvatarBubble size="lg" name={nameRight} style={[styles.avatarRight, styles.debug]}/>
                 </HStack>
 
-                
+                    
 
-                {/* <Pressable 
-                    style={[styles.pressable, styles.debug, {borderColor: 'green'}]}
-                    onPress={onPress}
-                >
+                    {/* <Pressable 
+                        style={[styles.pressable, styles.debug, {borderColor: 'green'}]}
+                        onPress={onPress}
+                    >
                 </Pressable> */}
             </LinearGradient>
+            <Motion.View
+                initial={{ height: 0 }}
+                animate={{ height: expanded ? height * 0.2 : 0 }}
+                transition={{ duration: 150 }}
+                style={[GlobalStyles.border, styles.commentSection]}
+            >
+                {expanded ? <CommentSection /> : null}
+                
+            </Motion.View>
         </Pressable>
-        
     )
 }
 
@@ -82,6 +91,9 @@ const styles = StyleSheet.create({
     },
     animationPadding: {
         paddingTop: height * 0.1,
+    },
+    commentSection: {
+        borderRaidus: 20,
     },
     pressable: {
         flex: 1,

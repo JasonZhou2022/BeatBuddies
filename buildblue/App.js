@@ -9,7 +9,8 @@ import HomePage from './Pages/HomePage'
 export default function App() {
   return (
     <View style={styles.container}>
-      <FeedPage />
+      <ProfilePage />
+      {/* <FeedPage /> */}
       {/* <PickSongPage /> */}
       {/* <Text>Finally got it working lets gooooo</Text> */}
       {/* <StatusBar style="auto" /> */}

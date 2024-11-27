@@ -7,11 +7,20 @@ export default function Post(props) {
     //style={[styles.container, {height: height * 0.25}]}
     return (
         <View style={styles.container}>
-            <Text style={styles.textLeft}>{props.userLeft}</Text>
-            <Text style={styles.textRight}>{props.userRight}</Text>
+            <View style={styles.textLeftContainers}>
+                <Text style={styles.textLeft}>{props.userLeft}</Text>    
+            </View>
+            <View style={styles.textLeftContainers}>
+                <Text style={styles.textRight}>{props.userRight}</Text>
+            </View>
+            
+            {/* <Text style={styles.textRight}>{props.userRight}</Text> */}
         </View>
     )
 }
+
+const debug = false;
+const fontSize = 30;
 
 const styles = StyleSheet.create({
     container: {
@@ -23,11 +32,34 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         //width: '100%'
         //height: height * 0.5,
-        alignItems: 'center'
+        alignItems: 'center',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+        //width: "100%"
     },
-    text: {
+    textLeftContainers: {
+        flexDirection: 'row',
+        borderWidth: debug ? 5 : 0,
+        borderColor: "white"
+    },
+    textRightContainers: {
+        flexDirection: 'row',
+        //alignItems: 'right',
+        borderWidth: debug ? 5 : 0,
+        borderColor: "white"
+    },
+    textLeft: {
+        borderWidth: debug ? 5 : 0,
+        borderColor: debug ? "#000" : null,
+        flex: 1,
         color: '#00d0ff',
-        fontSize: 50,
-        textAlign: "center"
+        fontSize: fontSize,
+        textAlign: 'left',
+    },
+    textRight: {
+        flex: 1,
+        color: '#00d0ff',
+        fontSize: fontSize,
+        textAlign: 'right'
     }
 });

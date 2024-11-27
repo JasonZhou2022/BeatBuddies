@@ -3,6 +3,8 @@ import { View, Text } from 'react-native';
 import Timer from '../Components/Timer';
 import Theme from '../Components/Theme';
 import PlayButton from '../Components/PlayButton';
+//import PulsatingCircle from '../Components/PulsatingCircle';
+//import Circle from '../assets/SVGs/PulsatingCircle'
 
 export default function PickSongPage()
 {
@@ -18,6 +20,7 @@ export default function PickSongPage()
     return (
         <View style={viewStyle}>
             <Theme />
+            {/* <Circle width={50} height={50} /> */}
             <Timer />
             <PlayButton />
         </View> 

@@ -7,16 +7,25 @@ import FeedPage from './Pages/FeedPage'
 import LoginPage from './Pages/LoginPage'
 import ProfilePage from './Pages/ProfilePage'
 import HomePage from './Pages/HomePage'
+import TestPage from './Pages/TestPage'
+import { NativeBaseProvider } from 'native-base';
 
 export default function App() {
   return (
-    <GluestackUIProvider mode="light"><View style={[styles.container, styles.debug]}>
-        {/* <ProfilePage name="Jason Zhou" handle="@jxzhou" blurb="When Life Gives You Lemons..." /> */}
-        <FeedPage />
-        {/* <PickSongPage /> */}
-        {/* <Text>Finally got it working lets gooooo</Text> */}
-        {/* <StatusBar style="auto" /> */}
-      </View></GluestackUIProvider>
+    <NativeBaseProvider>
+        <GluestackUIProvider mode="light">
+          <View style={[styles.container, styles.debug]}>
+            {/* <TestPage /> */}
+              {/* <ProfilePage name="Jason Zhou" handle="@jxzhou" blurb="When Life Gives You Lemons..." /> */}
+              <FeedPage />
+              {/* <PickSongPage /> */}
+              {/* <Text>Finally got it working lets gooooo</Text> */}
+              {/* <StatusBar style="auto" /> */}
+          </View>
+        </GluestackUIProvider>
+    </NativeBaseProvider>
+
+    
   );
 }
 
@@ -25,7 +34,7 @@ const debug = false;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'stretch'

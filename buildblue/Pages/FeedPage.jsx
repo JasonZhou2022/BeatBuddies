@@ -11,10 +11,10 @@ export default function FeedPage() {
       <ScrollView style={[styles.container, styles.debug]} contentContainerStyle={{alignItems: 'center'}}>
             <Box style={styles.margin10}></Box>
             <Post userLeft={"Jason"} userRight={"Amy"}/>
-            {/* <Post userLeft={"Bob"} userRight={"Marley"}/>
+            <Post userLeft={"Bob"} userRight={"Marley"}/>
             <Post userLeft={"Trump"} userRight={"Biden"}/>
             <Post userLeft={"Chad"} userRight={"Kyle"}/>
-            <Post userLeft={"Jenny Z"} userRight={"Jenny K"}/>
+            {/* <Post userLeft={"Jenny Z"} userRight={"Jenny K"}/>
             <Post userLeft={"Matthew"} userRight={"Erich"}/>
             <Post userLeft={"Lina"} userRight={"Wayne"}/>
             <Post userLeft={"Josh"} userRight={"Darian"}/>

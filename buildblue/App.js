@@ -8,6 +8,7 @@ import ProfilePage from './Pages/ProfilePage';
 import HomePage from './Pages/HomePage';
 import TestPage from './Pages/TestPage';
 import LoginPage from './Pages/LoginPage';
+import CreateAccountPage from './Pages/CreateAccountPage';
 import { NativeBaseProvider } from 'native-base';
 
 export default function App() {
@@ -16,7 +17,8 @@ export default function App() {
         <GluestackUIProvider mode="light">
           <View style={[styles.container, styles.debug]}>
           <StatusBar style="auto" />
-          <LoginPage />
+          {/* <LoginPage /> */}
+          <CreateAccountPage />
             {/* <TestPage /> */}
               {/* <ProfilePage name="Jason Zhou" handle="@jxzhou" blurb="When Life Gives You Lemons..." /> */}
               {/* <FeedPage /> */}

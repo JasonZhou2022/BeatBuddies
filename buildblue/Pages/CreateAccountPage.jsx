@@ -49,7 +49,7 @@ export default function LoginPage(){
 
     return (
         <VStack style={[styles.structure, styles.debug, {alignItems: 'center'}]}>
-            <Text style={[styles.heading, {alignSelf: 'center'}]}>Login</Text>
+            <Text style={[styles.heading, {alignSelf: 'center'}]}>Create Account</Text>
             <FormControl style={[, GlobalStyles.white]}>
                 <FormControlLabel>
                     <FormControlLabelText style={[GlobalStyles.white, GlobalStyles.bold, {fontSize: 20}]}>Username:</FormControlLabelText>
@@ -93,10 +93,10 @@ export default function LoginPage(){
                 <Button
                     style={styles.button}
                 >
-                <   ButtonText style={[GlobalStyles.white, {fontSize: 20, fontWeight: 'bold'}]}>Login</ButtonText>
+                <   ButtonText style={[GlobalStyles.white, {fontSize: 20, fontWeight: 'bold'}]}>Sign Up</ButtonText>
                 </Button>
             </FormControl>
-            <Text style={[GlobalStyles.white, {marginTop: height * 0.1}]}>Don't Have An Account? <Text style={{color: '#0096FF'}}>Sign Up</Text></Text>
+            <Text style={[GlobalStyles.white, {marginTop: height * 0.1}]}>Already Have An Account? <Text style={{color: '#0096FF'}}>Login</Text></Text>
         </VStack>
     )
 }
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
         borderWidth: 2,
         borderRadius: 5,
         borderColor: 'white',
-        width: width * 0.2,
+        width: width * 0.25,
         height: height * 0.05,
         alignSelf: 'center',
         marginTop: height * 0.02,

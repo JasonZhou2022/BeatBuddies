@@ -8,7 +8,7 @@ import { Box } from "@/Components/ui/box";
 import AvatarBubble from '../Components/AvatarBubble';
 import { VStack } from "@/Components/ui/vstack";
 import { HStack } from "@/Components/ui/hstack";
-import { Heading } from "@/Components/ui/heading"
+import { Heading } from "@/Components/ui/heading";
 import { Avatar, NativeBaseProvider, useTheme } from 'native-base';
 
 

@@ -23,7 +23,7 @@ export default function ProfilePage(props){
             <Box className="Avatar Card (Header)" style={styles.center}>
                 <VStack style={[styles.container, styles.padding5]}>
                     <Text style={styles.profile}>Profile</Text>
-                    <AvatarBubble className="Avatar Picture" uri = {defaultLink} size={"2xl"}/>
+                    <AvatarBubble className="Picture" uri = {defaultLink} size={"2xl"}/>
                     <Text className="name" style={styles.name}>{props.name}</Text>
                     <Text className="handle" style={[styles.childDebug, styles.handle]}>{props.handle}</Text>
                     <Text className="blurb" style={[styles.blurb, styles.padding3]}>{props.blurb}</Text>

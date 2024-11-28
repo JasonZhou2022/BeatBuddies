@@ -38,7 +38,7 @@ export default function Post({userLeft = "Jason", userRight = "Amy", nameLeft = 
     });
 
     const exampleCommenters = ['Jason', 'Amy', 'Michael', 'Jenny Z', 'Barry', 'Matthew', 'Erich', 'Jenny K', 'Isabella', 'Elle', 'Fay']
-    const examplesToDisplay = exampleCommenters.slice(0, 1);
+    const examplesToDisplay = exampleCommenters.slice(0, 5);
     const example = 'Generic Comment Goes Here!'
     const exampleComments = examplesToDisplay.map((handle, index) => (
         <Comment key={index} handle={handle} comment={example} />
@@ -64,7 +64,7 @@ export default function Post({userLeft = "Jason", userRight = "Amy", nameLeft = 
                 </HStack>
             </LinearGradient>
             {/* <Text style={[GlobalStyles.white, GlobalStyles.border]}>Test DropDown</Text> */}
-            <Animated.View style={[animatedStyle, {overflow: 'hidden'}, GlobalStyles.border]}>
+            <Animated.View style={[animatedStyle, {overflow: 'hidden'}]}>
                 {/* <Text style={[GlobalStyles.white, GlobalStyles.border]}>Test DropDown</Text> */}
                 <CommentSection style={styles.commentSection} comments={exampleComments}/>
             </Animated.View>

@@ -14,13 +14,13 @@ export default function FeedPage() {
             <Post userLeft={"Bob"} userRight={"Marley"}/>
             <Post userLeft={"Trump"} userRight={"Biden"}/>
             <Post userLeft={"Chad"} userRight={"Kyle"}/>
-            {/* <Post userLeft={"Jenny Z"} userRight={"Jenny K"}/>
+            <Post userLeft={"Jenny Z"} userRight={"Jenny K"}/>
             <Post userLeft={"Matthew"} userRight={"Erich"}/>
             <Post userLeft={"Lina"} userRight={"Wayne"}/>
             <Post userLeft={"Josh"} userRight={"Darian"}/>
             <Post userLeft={"Isabella"} userRight={"Youna"}/>
             <Post userLeft={"Elle"} userRight={"Fay"}/>
-            <Post userLeft={"Michael"} userRight={"Barry"}/> */}
+            <Post userLeft={"Michael"} userRight={"Barry"}/>
         </ScrollView>
     )
 

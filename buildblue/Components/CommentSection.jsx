@@ -20,7 +20,7 @@ export default function CommentSection({handle, style, comments}) {
 }
 
 const { width, height } = Dimensions.get('window');
-const debug = true;
+const debug = false;
 
 const styles = StyleSheet.create({
     zeroed: {

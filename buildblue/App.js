@@ -2,12 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import "@/global.css";
 import { GluestackUIProvider } from "@/Components/ui/gluestack-ui-provider";
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import PickSongPage from './Pages/PickSongPage'
-import FeedPage from './Pages/FeedPage'
-import LoginPage from './Pages/LoginPage'
-import ProfilePage from './Pages/ProfilePage'
-import HomePage from './Pages/HomePage'
-import TestPage from './Pages/TestPage'
+import PickSongPage from './Pages/PickSongPage';
+import FeedPage from './Pages/FeedPage';
+import ProfilePage from './Pages/ProfilePage';
+import HomePage from './Pages/HomePage';
+import TestPage from './Pages/TestPage';
+import LoginPage from './Pages/LoginPage';
 import { NativeBaseProvider } from 'native-base';
 
 export default function App() {
@@ -15,12 +15,14 @@ export default function App() {
     <NativeBaseProvider>
         <GluestackUIProvider mode="light">
           <View style={[styles.container, styles.debug]}>
+          <StatusBar style="auto" />
+          <LoginPage />
             {/* <TestPage /> */}
               {/* <ProfilePage name="Jason Zhou" handle="@jxzhou" blurb="When Life Gives You Lemons..." /> */}
-              <FeedPage />
+              {/* <FeedPage /> */}
               {/* <PickSongPage /> */}
               {/* <Text>Finally got it working lets gooooo</Text> */}
-              {/* <StatusBar style="auto" /> */}
+              
           </View>
         </GluestackUIProvider>
     </NativeBaseProvider>
@@ -34,7 +36,7 @@ const debug = false;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
     alignSelf: 'stretch'

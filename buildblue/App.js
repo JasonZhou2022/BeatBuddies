@@ -18,11 +18,11 @@ export default function App() {
           <View style={[styles.container, styles.debug]}>
           <StatusBar style="auto" />
           {/* <LoginPage /> */}
-          <CreateAccountPage />
+          {/* <CreateAccountPage /> */}
             {/* <TestPage /> */}
               {/* <ProfilePage name="Jason Zhou" handle="@jxzhou" blurb="When Life Gives You Lemons..." /> */}
               {/* <FeedPage /> */}
-              {/* <PickSongPage /> */}
+              <PickSongPage />
               {/* <Text>Finally got it working lets gooooo</Text> */}
               
           </View>

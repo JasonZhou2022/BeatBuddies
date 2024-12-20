@@ -20,13 +20,13 @@ Setup Instructions - Starting Expo Go
 1) Clone the Repository
   git clone https://github.com/<your-repo-name>.git
   cd <your-repo-name>
-2) Install Dependencies Install all required dependencies using:
+3) Install Dependencies Install all required dependencies using:
   npm install
-3) Fix TypeScript Prompt If prompted to install TypeScript dependencies, run:
+4) Fix TypeScript Prompt If prompted to install TypeScript dependencies, run:
   npm install typescript @types/react
-4) Start the Project Start the project using Expo:
+5) Start the Project Start the project using Expo:
   npx expo start
-5) Run on Expo Go
+6) Run on Expo Go
    Open the Expo Go app on your mobile device.
   Scan the QR code shown in your terminal or browser to load the app (QR code should appear after running 'npx expo start'.
 

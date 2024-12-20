@@ -28,7 +28,7 @@ Setup Instructions - Starting Expo Go
   npx expo start
 6) Run on Expo Go
    Open the Expo Go app on your mobile device.
-  Scan the QR code shown in your terminal or browser to load the app (QR code should appear after running 'npx expo start'.
+  Scan the QR code shown in your terminal or browser to load the app (QR code should appear after running 'npx expo start'.)
 
 
 

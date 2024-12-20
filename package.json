@@ -2,7 +2,14 @@
   "dependencies": {
     "@gluestack-ui/button": "^1.0.8",
     "@gluestack-ui/form-control": "^0.1.19",
+    "expo": "^52.0.21",
     "expo-linear-gradient": "^14.0.1",
+    "metro": "^0.81.0",
+    "react-native": "^0.76.5",
     "react-native-linear-gradient": "^2.8.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "@types/react": "~18.3.12"
   }
 }
